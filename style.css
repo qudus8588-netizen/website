@@ -1,0 +1,1171 @@
+
+/* =====================================
+   AQ PERFUME - COMPLETE WEBSITE CSS
+===================================== */
+
+/* 1. GLOBAL SETTINGS */
+
+:root {
+    --ivory: #FAFAF8;
+    --beige: #F5F2EB;
+    --soft-beige: #EAE4DA;
+    --charcoal: #1A1A1A;
+    --bronze: #B08D57;
+    --text: #66615A;
+    --muted: #888178;
+    --border: #DED6C9;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+body {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fafaf8;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 80px;
+    padding: 0 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(250, 250, 248, 0.95);
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+}
+
+.perfume-logo img {
+    width: 100px;
+    height: 100px;
+
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #1a1a1a;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #b08d57;
+}
+
+#brand h1 {
+    font-size: 22px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+    color: #1a1a1a;
+}
+
+#buy {
+    background-color: #1a1a1a;
+    color: white;
+
+    border: none;
+    padding: 12px 26px;
+
+    border-radius: 4px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#buy:hover {
+    background-color: #b08d57;
+    transform: translateY(-2px);
+}
+
+
+/* =====================================
+   3. HERO SECTION
+===================================== */
+
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 720px;
+    height: 100vh;
+    overflow: hidden;
+    background: var(--charcoal);
+}
+
+/* HERO IMAGE */
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-background img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -42%);
+
+    width: 90%;
+    max-width: 850px;
+
+    text-align: center;
+    color: var(--white);
+    z-index: 2;
+}
+
+.hero-subtitle {
+    display: block;
+    margin-bottom: 22px;
+
+    color: #D9B77F;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.hero-content h1 {
+    font-size: clamp(48px, 7vw, 88px);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -2px;
+
+    margin-bottom: 25px;
+    text-shadow: 0 5px 25px rgba(0, 0, 0, 0.35);
+}
+
+.hero-content p {
+    max-width: 580px;
+    margin: 0 auto 32px;
+
+    color: rgba(255, 255, 255, 0.9);
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* HERO BUTTON */
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 30px;
+    background: var(--white);
+    color: var(--charcoal);
+    border: 1px solid var(--white);
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: var(--bronze);
+    border-color: var(--bronze);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+
+/* =====================================
+   4. COMMON SECTION SPACING
+===================================== */
+
+.section-padding {
+    padding: 100px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.section-heading > span {
+    display: block;
+    margin-bottom: 13px;
+    color: var(--bronze);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.section-heading h2 {
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--charcoal);
+}
+
+.section-heading p {
+    margin-top: 15px;
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* =====================================
+   5. ABOUT SECTION
+===================================== */
+
+.about {
+    width: 100%;
+    background: var(--beige);
+}
+
+/* ABOUT LAYOUT */
+
+.about-container {
+    max-width: 1350px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 75px;
+}
+
+/* ABOUT TEXT */
+
+.about-content {
+    width: 100%;
+}
+
+.small-label {
+    display: block;
+    margin-bottom: 18px;
+
+    color: var(--bronze);
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.about-content h2 {
+    max-width: 550px;
+    margin-bottom: 25px;
+
+    color: var(--charcoal);
+
+    font-size: clamp(42px, 5vw, 65px);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -2px;
+}
+
+.about-content h2 span {
+    display: block;
+    color: var(--bronze);
+}
+
+.about-content p {
+    max-width: 550px;
+    margin-bottom: 18px;
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* ABOUT IMAGE */
+
+.about-image {
+    width: 100%;
+    height: 570px;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.6s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.04);
+}
+
+/* COMMON DARK BUTTON */
+
+.dark-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    margin-top: 15px;
+    padding: 15px 27px;
+
+    background: var(--charcoal);
+    color: var(--white);
+
+    border: 1px solid var(--charcoal);
+    border-radius: 3px;
+
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+    transition: all 0.3s ease;
+}
+
+.dark-button:hover {
+    background: var(--bronze);
+    border-color: var(--bronze);
+    transform: translateY(-3px);
+}
+
+
+/* =====================================
+   6. PRODUCTS SECTION
+===================================== */
+
+.products {
+    width: 100%;
+    background: var(--ivory);
+}
+
+/* PRODUCT GRID */
+
+.product-container {
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 35px;
+}
+
+/* PRODUCT CARD */
+
+.product-card {
+    min-width: 0;
+    background: var(--white);
+
+    border: 1px solid #ECE8E1;
+    border-radius: 5px;
+    overflow: hidden;
+
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(30, 25, 18, 0.09);
+}
+
+/* PRODUCT IMAGE */
+
+.product-image {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    background: var(--soft-beige);
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.04);
+}
+
+/* PRODUCT DETAILS */
+
+.product-info {
+    padding: 25px 24px 28px;
+}
+
+.product-number {
+    display: block;
+    margin-bottom: 12px;
+
+    color: var(--bronze);
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.product-info h3 {
+    margin-bottom: 12px;
+
+    color: var(--charcoal);
+
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.product-info p {
+    min-height: 78px;
+    margin-bottom: 18px;
+
+    color: var(--text);
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.product-info h4 {
+    margin-bottom: 18px;
+
+    color: var(--charcoal);
+
+    font-size: 21px;
+    font-weight: 700;
+}
+
+/* PRODUCT BUTTON */
+
+.product-button {
+    width: 100%;
+    min-height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--charcoal);
+    color: var(--white);
+
+    border: 1px solid var(--charcoal);
+    border-radius: 3px;
+
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: all 0.3s ease;
+}
+
+.product-button:hover {
+    background: var(--bronze);
+    border-color: var(--bronze);
+}
+
+
+/* =====================================
+   7. CONTACT SECTION
+===================================== */
+
+.contact {
+    width: 100%;
+    background: var(--beige);
+}
+
+/* CONTACT LAYOUT */
+
+.contact-container {
+    max-width: 1350px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 75px;
+}
+
+/* CONTACT IMAGE */
+
+.contact-image {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.contact-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* CONTACT CONTENT */
+
+.contact-content h3 {
+    margin-bottom: 18px;
+
+    color: var(--charcoal);
+
+    font-size: clamp(30px, 4vw, 43px);
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.contact-description {
+    max-width: 500px;
+    margin-bottom: 30px;
+
+    color: var(--text);
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* CONTACT DETAILS */
+
+.contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    margin-bottom: 23px;
+}
+
+.contact-detail > i {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--soft-beige);
+    color: var(--bronze);
+
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.contact-detail div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.contact-detail span {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.contact-detail a,
+.contact-detail p {
+    color: var(--charcoal);
+    font-size: 15px;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.contact-detail a:hover {
+    color: var(--bronze);
+}
+
+
+/* =====================================
+   8. FOOTER
+===================================== */
+
+.aq-footer {
+    width: 100%;
+    padding: 60px 60px 22px;
+
+    background: var(--beige);
+    color: var(--charcoal);
+
+    border-top: 1px solid var(--border);
+}
+
+/* FOOTER GRID */
+
+.aq-footer-container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.5fr 0.8fr 1.3fr 1fr;
+    gap: 45px;
+    align-items: start;
+}
+
+/* FOOTER BRAND */
+
+.aq-footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+
+    margin-bottom: 22px;
+
+    text-decoration: none;
+}
+
+.aq-footer-logo img {
+    width: 105px;
+    height: 105px;
+
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.aq-footer-logo span {
+    color: var(--charcoal);
+
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.aq-footer-brand > p {
+    max-width: 340px;
+
+    color: var(--text);
+
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* FOOTER HEADINGS */
+
+.aq-footer h3 {
+    margin-bottom: 25px;
+
+    color: var(--charcoal);
+
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+/* FOOTER LINKS */
+
+.aq-footer-links a {
+    display: block;
+    width: fit-content;
+
+    margin-bottom: 16px;
+
+    color: var(--text);
+    text-decoration: none;
+
+    font-size: 15px;
+
+    transition: all 0.3s ease;
+}
+
+.aq-footer-links a:hover {
+    color: var(--bronze);
+    transform: translateX(4px);
+}
+
+/* FOOTER CONTACT */
+
+.aq-footer-contact p {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    margin-bottom: 17px;
+
+    color: var(--text);
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.aq-footer-contact p i {
+    width: 18px;
+    margin-top: 3px;
+    color: var(--bronze);
+    font-size: 15px;
+}
+
+/* FOOTER SOCIAL */
+
+.aq-footer-social  p {
+    margin-bottom: 22px;
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.aq-social-icons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.aq-social-icons a {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--soft-beige);
+    color: var(--charcoal);
+
+    border: 1px solid var(--border);
+    border-radius: 50%;
+
+    font-size: 21px;
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.aq-social-icons a:hover {
+    background: var(--bronze);
+    color: var(--white);
+    border-color: var(--bronze);
+    transform: translateY(-4px);
+}
+
+/* FOOTER BOTTOM */
+
+.aq-footer-bottom {
+    width: 100%;
+    max-width: 1600px;
+    margin: 48px auto 0;
+    padding-top: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+
+    border-top: 1px solid var(--border);
+}
+
+.aq-footer-bottom p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* PRIVACY AND TERMS */
+
+.aq-footer-terms {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.aq-footer-terms a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 13px;
+
+    transition: color 0.3s ease;
+}
+
+.aq-footer-terms a:hover {
+    color: var(--bronze);
+}
+
+
+/* =====================================
+   9. TABLET RESPONSIVE
+===================================== */
+
+@media (max-width: 1100px) {
+
+    .site-header {
+        padding: 0 30px;
+        gap: 18px;
+    }
+
+    .main-nav {
+        gap: 18px;
+    }
+
+    .header-brand {
+        font-size: 18px;
+    }
+
+    .section-padding {
+        padding: 80px 5%;
+    }
+
+    .about-container,
+    .contact-container {
+        gap: 40px;
+    }
+
+    .product-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+    }
+
+    .aq-footer {
+        padding: 50px 35px 22px;
+    }
+
+    .aq-footer-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 42px;
+    }
+
+}
+
+
+/* =====================================
+   10. MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 700px) {
+
+    /* HEADER */
+
+    .site-header {
+        min-height: 72px;
+        padding: 0 18px;
+        gap: 12px;
+    }
+
+    .perfume-logo img {
+        width: 46px;
+        height: 46px;
+    }
+
+    .main-nav {
+        gap: 12px;
+    }
+
+    .main-nav a {
+        font-size: 11px;
+    }
+
+    .main-nav a::after {
+        bottom: -5px;
+    }
+
+    .header-brand {
+        display: none;
+    }
+
+    .header-button {
+        padding: 10px 13px;
+        font-size: 11px;
+    }
+
+    /* HERO */
+
+    .hero {
+        min-height: 620px;
+        height: 90vh;
+    }
+
+    .hero-content {
+        width: 92%;
+        top: 52%;
+    }
+
+    .hero-subtitle {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(42px, 10vw, 62px);
+        letter-spacing: -1px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .hero-btn {
+        padding: 14px 22px;
+        font-size: 12px;
+    }
+
+    /* COMMON SECTIONS */
+
+    .section-padding {
+        padding: 65px 22px;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
+    .section-heading p {
+        font-size: 14px;
+    }
+
+    /* ABOUT */
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-content h2 {
+        font-size: 43px;
+    }
+
+    .about-content p {
+        font-size: 15px;
+    }
+
+    .about-image {
+        height: 390px;
+    }
+
+    /* PRODUCTS */
+
+    .product-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .product-image {
+        height: 260px;
+    }
+
+    .product-info {
+        padding: 17px 14px 20px;
+    }
+
+    .product-number {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .product-info h3 {
+        font-size: 17px;
+    }
+
+    .product-info p {
+        min-height: 105px;
+        font-size: 12px;
+    }
+
+    .product-info h4 {
+        font-size: 18px;
+    }
+
+    .product-button {
+        min-height: 42px;
+        font-size: 11px;
+    }
+
+    /* CONTACT */
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .contact-image {
+        height: 320px;
+    }
+
+    .contact-content h3 {
+        font-size: 32px;
+    }
+
+    .contact-description {
+        font-size: 14px;
+    }
+
+    .contact-detail a,
+    .contact-detail p {
+        font-size: 14px;
+    }
+
+    /* FOOTER */
+
+    .aq-footer {
+        padding: 42px 22px 20px;
+    }
+
+    .aq-footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px 22px;
+    }
+
+    .aq-footer-logo {
+        gap: 12px;
+    }
+
+    .aq-footer-logo img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .aq-footer-logo span {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
+    .aq-footer-brand > p,
+    .aq-footer-links a,
+    .aq-footer-contact p,
+    .aq-footer-social > p {
+        font-size: 13px;
+    }
+
+    .aq-footer h3 {
+        font-size: 16px;
+        margin-bottom: 18px;
+    }
+
+    .aq-social-icons {
+        gap: 9px;
+    }
+
+    .aq-social-icons a {
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+    }
+
+    .aq-footer-bottom {
+        margin-top: 35px;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .aq-footer-bottom p,
+    .aq-footer-terms a {
+        font-size: 12px;
+    }
+
+    .aq-footer-terms {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+}
+
+
+/* =====================================
+   11. SMALL MOBILE
+===================================== */
+
+@media (max-width: 420px) {
+
+    .site-header {
+        padding: 0 12px;
+        gap: 8px;
+    }
+
+    .perfume-logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .main-nav {
+        gap: 9px;
+    }
+
+    .main-nav a {
+        font-size: 10px;
+    }
+
+    .header-button {
+        padding: 9px 10px;
+        font-size: 10px;
+    }
+
+    .product-container {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .product-image {
+        height: 350px;
+    }
+
+    .product-info p {
+        min-height: auto;
+        font-size: 14px;
+    }
+
+    .aq-footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .aq-footer-logo img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .aq-footer-logo span {
+        font-size: 21px;
+    }
+
+}
